@@ -1,0 +1,20 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# Local junk
+*.log
+*.tmp
+*.bak
+
+# Do not ignore dist/*.zip - the public install zip is kept for downloads and the update server.
+
+# Local helper scripts (never publish)
+_*.bat
+_*.cmd

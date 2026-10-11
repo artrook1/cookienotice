@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="system" method="upgrade">
+	<name>System - Cookie Notice</name>
+	<author>artrook1</author>
+	<authorEmail>artrook@hotmail.com</authorEmail>
+	<authorUrl>https://github.com/artrook1/cookienotice</authorUrl>
+	<creationDate>2026-10</creationDate>
+	<copyright>(C) 2026 artrook1</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>1.0.3</version>
+	<description>PLG_SYSTEM_COOKIENOTICE_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<namespace path="src">Joomla\Plugin\System\Cookienotice</namespace>
+	<files>
+		<folder plugin="cookienotice">services</folder>
+		<folder>src</folder>
+		<folder>media</folder>
+		<filename>script.php</filename>
+		<filename>LICENSE.txt</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/plg_system_cookienotice.ini</language>
+		<language tag="en-GB">language/en-GB/plg_system_cookienotice.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="warningMessage"
+					type="textarea"
+					rows="6"
+					label="PLG_SYSTEM_COOKIENOTICE_MESSAGE_LABEL"
+					description="PLG_SYSTEM_COOKIENOTICE_MESSAGE_DESC"
+					filter="raw"
+					default="Important Cookie Information - this message will appear only once.&#10;&#10;To give you the best possible experience, this site uses cookies and by continuing to use the site you agree that we can save them on your device.&#10;&#10;Cookies are small text files which are placed on your computer and allow to remember your preferences and some other details of your visit to our site."
+				/>
+				<field
+					name="detailsUrl"
+					type="text"
+					label="PLG_SYSTEM_COOKIENOTICE_PRIVACY_URL_LABEL"
+					description="PLG_SYSTEM_COOKIENOTICE_PRIVACY_URL_DESC"
+					default="privacy-policy"
+					filter="string"
+				/>
+				<field
+					name="acceptLabel"
+					type="text"
+					label="PLG_SYSTEM_COOKIENOTICE_ACCEPT_LABEL"
+					description="PLG_SYSTEM_COOKIENOTICE_ACCEPT_LABEL_DESC"
+					default="I accept cookies from this site."
+					filter="string"
+				/>
+				<field
+					name="agreeButton"
+					type="text"
+					label="PLG_SYSTEM_COOKIENOTICE_AGREE_BUTTON"
+					description="PLG_SYSTEM_COOKIENOTICE_AGREE_BUTTON_DESC"
+					default="Agree"
+					filter="string"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="Cookie Notice Updates">https://raw.githubusercontent.com/artrook1/cookienotice/main/updates.xml</server>
+	</updateservers>
+</extension>
